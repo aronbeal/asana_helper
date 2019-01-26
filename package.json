@@ -5,8 +5,7 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "webpack --config webpack/webpack.prod.js"
+    "build": "webpack --config webpack/webpack.dev.js"
   },
   "author": "Aron Beal <aron.beal.biz@gmail.com>",
   "license": "ISC",
@@ -21,5 +20,8 @@
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-merge": "~4.1.4"
+  },
+  "dependencies": {
+    "vue": "^2.5.22"
   }
 }

@@ -12,18 +12,18 @@ module.exports = {
 	},
 
 	plugins: [
-		new CleanWebpackPlugin([path.join(__dirname,  '/../dist') ], {
-			root: path.join(__dirname),
-			// exclude: [ 'shared.js' ],
-			verbose: true,
-            dry: false,
-            watch: true,
-            allowExternal: true
-        }),
+		// new CleanWebpackPlugin([path.join(__dirname,  '/../dist') ], {
+		// 	root: path.join(__dirname),
+		// 	// exclude: [ 'shared.js' ],
+		// 	verbose: true,
+        //     dry: false,
+        //     watch: true,
+        //     allowExternal: true
+        // }),
 		new CopyWebpackPlugin([
-            {from:"src/assets/*", to: "assets"},
-            {from:"src/pages/*", to: "pages"},
-            {from:"src/manifest.json", to: "."}
+            {from:"src/assets/*", to: "assets", flatten: true},
+            {from:"src/pages/*", to: "pages", flatten: true},
+            {from:"src/manifest.json", to: ".", flatten: true}
         ])
 	],
 	output: {
